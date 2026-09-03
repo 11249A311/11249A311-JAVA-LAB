@@ -1,0 +1,37 @@
+class OrderPlacement extends Thread {
+    public void run() {
+        try {
+            System.out.println("Order Placement Started");
+            Thread.sleep(1000);
+            System.out.println("Selecting Food Item");
+            Thread.sleep(1000);
+            System.out.println("Order Placed Successfully");
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
+    }
+}
+
+class OrderDelivery extends Thread {
+    public void run() {
+        try {
+            System.out.println("Order Delivery Started");
+            Thread.sleep(1000);
+            System.out.println("Food is being prepared");
+            Thread.sleep(1000);
+            System.out.println("Food Delivered Successfully");
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
+    }
+}
+
+public class FoodDelivery {
+    public static void main(String[] args) {
+        OrderPlacement t1 = new OrderPlacement();
+        OrderDelivery t2 = new OrderDelivery();
+
+        t1.start();
+        t2.start();
+    }
+}
