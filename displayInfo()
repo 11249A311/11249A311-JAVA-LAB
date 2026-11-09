@@ -1,0 +1,16 @@
+package studentInfo;
+
+class Student {
+    void displayInfo() {
+        System.out.println("Student Name: Harika");
+        System.out.println("Course: CSE");
+        System.out.println("College: Engineering College");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.displayInfo();
+    }
+}
